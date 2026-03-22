@@ -283,7 +283,7 @@ def leads():
     else:
         url = f"https://api.airtable.com/v0/{AIRTABLE_BASE_ID}/{AIRTABLE_TABLE}"
         headers = {"Authorization": f"Bearer {AIRTABLE_API_KEY}"}
-        params  = {"sort[0][field]": "Created", "sort[0][direction]": "desc", "maxRecords": 100}
+        params  = {"maxRecords": 100}
 
         try:
             r = requests.get(url, headers=headers, params=params, timeout=8)
